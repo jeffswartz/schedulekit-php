@@ -6,14 +6,15 @@ An OpenTok 1-to-1 solution focussed on call scheduling
 ## Installation
 
 1. Clone the repository.
-2. Rename   `config.ini.sample` to `config.ini` and configure your credentials:
-2. Set the `OPENTOK_KEY` and `OPENTOK_SECRET` environment variables to your OpenTok API key and
+2. Rename   `config.ini.sample` to `config.ini` and configure your credentials.
+2. Set the `OPENTOK_KEY` and `OPENTOK_SECRET` variables in `config.ini` to your OpenTok API key and
    secret values from the [TokBox Dashboard](https://dashboard.tokbox.com).
-3. Set the `MYSQL_URL` environment variable with your MySQL database URL. The format is
+3. Set the `MYSQL_URL` environment variable with your MySQL database URL in `config.ini`. The format is
    `mysql://username:password@mysqlurl:port/database_name`
+3. This app requires your email credentials to send emails to customers notifying them about their appointments. Set `GMAIL_USER` and `GMAIL_PW` in `config.ini`
 4. Install [Composer](https://getcomposer.org/).
 5. Use Composer to install dependencies: `composer install`
-6. Set the document root for your web server (such as Apache, nginx, etc.) to the root directory
+6. Set the document root for your web server (such as Apache, nginx, etc.) to the `web` directory
    of this project. In the case of Apache, the provided `.htaccess` file handles URL rewriting.
    See the [Slim Route URL Rewriting Guide](http://docs.slimframework.com/#Route-URL-Rewriting)
    for more details.
@@ -36,6 +37,7 @@ An OpenTok 1-to-1 solution focussed on call scheduling
 
 * PHP
 * MySQL
+* Email account
 
 ## Code and Conceptual Walkthrough
 
